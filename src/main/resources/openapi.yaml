@@ -2,20 +2,15 @@ openapi: 3.0.2
 servers:
   - url: /v3
 info:
-  description: |-
-    This is a sample Pet Store Server based on the OpenAPI 3.0 specification.  You can find out more about
-    Swagger at [http://swagger.io](http://swagger.io). In the third iteration of the pet store, we've switched to the design first approach!
-    You can now help us improve the API whether it's by making changes to the definition itself or to the code.
-    That way, with time, we can improve the API in general, and expose some of the new features in OAS3.
-
-    Some useful links:
-    - [The Pet Store repository](https://github.com/swagger-api/swagger-petstore)
-    - [The source API definition for the Pet Store](https://github.com/swagger-api/swagger-petstore/blob/master/src/main/resources/openapi.yaml)
+  description: |
+    This is a sample pet store that Kevin is going to use to discuss Stoplight. 
   version: 1.0.20-SNAPSHOT
-  title: Swagger Petstore - OpenAPI 3.0
-  termsOfService: 'http://swagger.io/terms/'
+  title: Kevin's Awesome PetStore
+  termsOfService: ''
   contact:
-    email: apiteam@swagger.io
+    email: kevjohnson1995@yahoo.com
+    name: Kevin Johnson
+    url: ''
   license:
     name: Apache 2.0
     url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
@@ -153,9 +148,7 @@ paths:
       tags:
         - pet
       summary: Finds Pets by tags
-      description: >-
-        Multiple tags can be provided with comma separated strings. Use tag1,
-        tag2, tag3 for testing.
+      description: 'Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.'
       operationId: findPetsByTags
       parameters:
         - name: tags
@@ -371,9 +364,7 @@ paths:
         - store
       summary: Find purchase order by ID
       x-swagger-router-controller: OrderController
-      description: >-
-        For valid response try integer IDs with value <= 5 or > 10. Other values
-        will generate exceptions.
+      description: For valid response try integer IDs with value <= 5 or > 10. Other values will generate exceptions.
       operationId: getOrderById
       parameters:
         - name: orderId
@@ -402,9 +393,7 @@ paths:
         - store
       summary: Delete purchase order by ID
       x-swagger-router-controller: OrderController
-      description: >-
-        For valid response try integer IDs with value < 1000. Anything above
-        1000 or nonintegers will generate API errors
+      description: For valid response try integer IDs with value < 1000. Anything above 1000 or nonintegers will generate API errors
       operationId: deleteOrder
       parameters:
         - name: orderId
@@ -453,7 +442,7 @@ paths:
       tags:
         - user
       summary: Creates list of users with given input array
-      description: 'Creates list of users with given input array'
+      description: Creates list of users with given input array
       x-swagger-router-controller: UserController
       operationId: createUsersWithListInput
       responses:
@@ -672,7 +661,7 @@ components:
           example: CA
         zip:
           type: string
-          example: "94301"
+          example: '94301'
       xml:
         name: address
       type: object
@@ -710,10 +699,10 @@ components:
           example: john@email.com
         password:
           type: string
-          example: "12345"
+          example: '12345'
         phone:
           type: string
-          example: "12345"
+          example: '12345'
         userStatus:
           type: integer
           format: int32
